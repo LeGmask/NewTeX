@@ -37,9 +37,11 @@
 \tcbuselibrary{breakable}
 
 %\newfontfamily{\serialfont}{Jaapokki}[
-    %Extension=.otf,
+%    Extension=.otf,
 %    UprightFont=*-Regular
 %]
+
+\setmonofont{Fira Code Light}[Contextuals=Alternate]
 
 \newfontfamily{\rubikregfont}{Rubik}[
     Scale=0.9,
@@ -366,3 +368,35 @@
     fonttitle=\fontsize{10}{20}\rubikregfont\bfseries,
     title=\color{white}Remarque,
 }
+
+\newtcolorbox{newtex_code_area}[1]{
+    breakable,
+    enhanced,
+    arc=6pt,
+    colback=color_lightgray,
+    colframe=color_lightgray,
+    boxrule=0mm,
+    top=6mm,
+    attach boxed title to top left={xshift=5mm,yshift=-4.5mm},
+    boxed title style={enhanced,
+      colframe=color_yellow,
+      colback=color_yellow,
+      colupper={black},
+    },
+    fonttitle=\fontsize{10}{20}\rubikregfont\bfseries,
+    title=\color{white}#1,
+}
+
+%%%%%%%%%%%%%%%%%%%%
+%%%  Code block  %%%
+%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{minted}
+\usemintedstyle{xcode}
+
+\newenvironment{code}[2][]
+ {\VerbatimEnvironment
+  \begin{newtex_code_area}{#2}
+  \begin{minted}[
+    fontsize=\scriptsize,
+    #1]{#2}}
+ {\end{minted}\end{newtex_code_area}}
