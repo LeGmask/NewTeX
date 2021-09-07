@@ -41,7 +41,7 @@
 %    UprightFont=*-Regular
 %]
 
-\setmonofont{Fira Code Light}[Contextuals=Alternate]
+\setmonofont{Fira Code Light} %[Contextuals=Alternate]
 
 \newfontfamily{\rubikregfont}{Rubik}[
     Scale=0.9,
