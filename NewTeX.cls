@@ -49,14 +49,14 @@
 
 \setmainfont{Rubik}[
     Scale=0.9,
-    UprightFont={* Light},
-    ItalicFont={* Light Italic},
+    UprightFont={*, Light},
+    ItalicFont={*, Light Italic},
     ]
 
     
 \setromanfont{Rubik}[
     Scale=0.9,
-    UprightFont={* Light},
+    UprightFont={*, Light},
     ]
 
 %%%%%%%%%%%%%%%%
